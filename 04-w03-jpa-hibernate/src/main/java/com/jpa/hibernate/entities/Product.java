@@ -22,6 +22,14 @@ public class Product {
 	@Column(name = "product_title", unique=true, nullable=false, length=100)
 	private String title;
 	
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 	@Column(name="description")
 	private String description;
 	
@@ -91,8 +99,17 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", title=" + title + ", description=" + description + ", price="
+				+ price + ", isLive=" + isLive + ", category=" + category + "]";
+	}
+
+	/*@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", title=" + title + ", description=" + description + ", price="
 				+ price + ", isLive=" + isLive + "]";
 	}
+	
+	*/
+	
 	
 	
 	

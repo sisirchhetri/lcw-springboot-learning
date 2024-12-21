@@ -34,5 +34,21 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
 	List<Product> getProductByTile(
 			@Param("title") String title, 
 			@Param("price") double price);
+	
+	
+	// Custom Method For LIKE Query
+	// select * from product where  title  like '%in'
+	List<Product> findByTitleContaining(String keyword);
+	
+	//"%wildcard%"
+	List<Product> findByTitleLike(String keywordWithWild);
+	
+	List<Product> findByTitleNotContaining(String title);
+	
+	//Method To Join Query And Fetch Results
+	@Query("SELECT p FROM Product p JOIN  p.category where p.category.title =:catTitle")
+	List<Product> getProductByCategoryTitle(@Param("catTitle") String title);
+	
+	
 
 }

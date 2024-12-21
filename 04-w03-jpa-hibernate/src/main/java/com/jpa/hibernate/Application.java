@@ -37,7 +37,7 @@ public class Application implements CommandLineRunner{
 		
 		
 		//productService.findAll().forEach(System.out::println);
-		System.out.println(productService.byId(1));
+//		System.out.println(productService.byId(1));
 		
 		
 		

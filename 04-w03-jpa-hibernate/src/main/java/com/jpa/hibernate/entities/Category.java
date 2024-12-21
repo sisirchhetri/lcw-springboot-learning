@@ -59,8 +59,19 @@ public class Category {
 		this.productList = productList;
 	}
 
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", title=" + title + "]";
+	}
+
+	
+
 	//	@ManyToMany(mappedBy ="category")
 	//	private List<Product> productList;
+	
+	
 
+	
+	
 
 }

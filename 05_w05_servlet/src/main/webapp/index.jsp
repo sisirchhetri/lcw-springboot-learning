@@ -19,6 +19,7 @@
         <div> 
             <p>This is a form</p>
             <form action="<%= application.getContextPath() %>/third" method="post">
+            	<input name="name" type="text" placeholder="Enter your message " >
                 <button id="submit">Submit</button>
             </form>
 

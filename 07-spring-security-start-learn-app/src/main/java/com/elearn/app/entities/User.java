@@ -2,6 +2,7 @@ package com.elearn.app.entities;
 
 import java.util.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ public class User {
 	
 	private String name;
 	
+	@Column(unique = true)//user-name for login
 	private String email;
 	
 	private String phoneNumber;
